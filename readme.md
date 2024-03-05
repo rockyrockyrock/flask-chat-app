@@ -40,7 +40,7 @@ python main.py
 
 This will start the Flask server, and you should be able to access the application at http://127.0.0.1:5000/ on your browser.
 
-### Future Improvements
+## Future Improvements
 
 
 Several features can improve the overall functionality, including user authentication, private rooms, persistent storage, a notification system, end-to-end
