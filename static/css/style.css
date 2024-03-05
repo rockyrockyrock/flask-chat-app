@@ -1,0 +1,224 @@
+/* Basic Resets & Styling */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h3 {
+  font-size: 24px;
+  color: #333;
+}
+
+label,
+input,
+button {
+  font-size: 16px;
+}
+
+/* Flexbox Centering */
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Form Styling */
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+}
+
+/* Flex Containers */
+.join,
+.input-group {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Equal Width Adjustments */
+.input-group,
+.join {
+  justify-content: space-between;
+}
+
+.input-group label,
+.join label {
+  width: 10%;
+}
+
+.input-group input,
+.join input {
+  width: 75%;
+}
+
+.join-btn {
+  width: 25%;
+}
+
+/* Input and Button Styling */
+input,
+button {
+  padding: 12px;
+  border-radius: 12px;
+  border: 2px solid #ddd;
+  background-color: #f7f7f7;
+  outline: none;
+}
+
+input:focus {
+  border-color: #707b90;
+}
+
+.join-btn,
+.create-btn {
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #708590;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.join-btn:hover,
+.create-btn:hover {
+  background-color: #5d7680;
+}
+
+.create-btn {
+  background-color: #4caf50;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.message-box {
+  border-radius: 12px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #ddd;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.messages {
+  overflow-y: scroll;
+  flex-grow: 1;
+  margin: 0 -20px;
+  padding: 10px 20px;
+  background-color: #e6e8eb;
+  border-radius: 8px;
+}
+
+.inputs {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#message {
+  flex-grow: 1;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  background-color: #f7f7f7;
+}
+
+button {
+  padding: 12px;
+  border-radius: 12px;
+  border: 2px solid #ddd;
+  background-color: #f7f7f7;
+  outline: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    transform 0.1s ease;
+  cursor: pointer; /* Make it obvious it's clickable */
+}
+
+button:hover {
+  background-color: #e6e8eb; /* Slightly darker on hover for feedback */
+  border-color: #b3b3b3; /* Darker border on hover */
+}
+
+button:active {
+  transform: scale(0.98); /* Slightly shrink on click for tactile feedback */
+  border-color: #707b90; /* Even darker border to indicate active state */
+}
+
+.text {
+  display: flex;
+  flex-direction: column; /* Stack message and timestamp vertically for clarity */
+  padding: 10px; /* Increased padding for better spacing */
+  margin-bottom: 12px; /* Space between messages */
+  background-color: #f7f9fa; /* Light background for each message */
+  border-radius: 8px; /* Softened corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-left: 4px solid #708590; /* Accent border to highlight messages */
+}
+
+.muted {
+  font-size: 12px; /* Slightly larger for readability */
+  color: #9099a2; /* Soft, modern color for timestamps */
+  margin-top: 8px; /* Space from the message to timestamp */
+  text-align: right; /* Align timestamp to the right for visual separation */
+}
+
+/* Styling for the message sender's name for more emphasis */
+.text strong {
+  font-size: 14px; /* Make the sender's name slightly larger */
+  color: #333; /* Darker color for emphasis */
+  margin-bottom: 4px; /* Space between the name and the message text */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 500px) {
+  .home {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .input-group label,
+  .join label {
+    width: 30%; /* Increase label width on smaller screens */
+  }
+
+  .input-group input,
+  .join input,
+  .join-btn {
+    width: calc(70% - 10px); /* Adjust input/button width on smaller screens */
+  }
+
+  .join-btn {
+    width: calc(
+      70% - 10px
+    ); /* Ensuring button width matches input on smaller screens */
+  }
+}
